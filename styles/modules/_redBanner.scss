@@ -1,0 +1,25 @@
+.redBanner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $secondary-color;
+  color: $white;
+  padding: 3.75rem 0 3.75rem 0;
+  @include small-screen {
+    /* padding-top: 2.5rem; */
+    /* padding-bottom: 2.75rem; */
+    padding: 2.75rem 0 2.75rem 0;
+  }
+  &__title {
+    font-weight: $body-highlight-font-weight;
+    margin: 0 0 1rem 0;
+    @include small-screen {
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+
+
+

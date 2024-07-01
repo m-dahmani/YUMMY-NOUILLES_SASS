@@ -1,0 +1,46 @@
+/* Modules */
+
+@import 'modules/variables';
+@import 'modules/appBar';
+@import 'modules/cta';
+@import 'modules/redBanner';
+@import 'modules/contactInfo';
+@import 'modules/footer';
+
+/* Pages */
+@import 'pages/home';
+@import 'pages/menu';
+@import 'pages/contact';
+
+
+// Ajoutez d'autres importations au besoin
+
+// Styles globaux
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600&display=swap');
+
+body {
+  background-color: $main-color;
+  @include body;
+  @include small-screen {
+    font-size: map-get($body-font-size, small-screen);
+    line-height: map-get($body-line-height, small-screen);
+  }
+}
+
+h1 {
+  @include title;
+  @include small-screen-title;
+}
+
+h2 {
+  @include subtitle;
+  text-decoration: underline $secondary-color;
+  text-underline-offset: 0.25rem;
+  text-decoration-thickness: 0.188rem;
+  @include small-screen-subtitle;
+}
+
+
+
+
+

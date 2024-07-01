@@ -1,0 +1,97 @@
+/* Design System */
+@use "sass:map";
+
+/* Variables par défaut */
+
+/* Colors */
+$main-color: #F3F3F3;
+$secondary-color: #D2483D;
+$black: #000000;
+$white: #FFFFFF;
+
+/* Text configuration */
+$body-font: 'Montserrat';
+$body-highlight-font: Montserrat;
+$title-font: Bebas Neue;
+$subtitle-font: 'Bebas Neue';
+
+$body-font-weight: 400;
+$body-highlight-font-weight: 600;
+$title-font-weight: 400;
+$subtitle-font-weight: 400;
+
+/* Mobile Variables */
+$body-font-size: (
+  default: 1.25rem,
+  small-screen: 1rem
+);
+$title-font-size: (
+  default: 4.5rem,
+  small-screen: 2.5rem
+);
+
+$subtitle-font-size: (
+  default: 1.5rem,
+  small-screen: 1.25rem
+);
+
+$body-line-height: (
+  default: 1.5rem,
+  small-screen: 1.25rem
+);
+$title-line-height: (
+  default: 5.375rem,
+  small-screen: 3rem
+);
+$subtitle-line-height: (
+  default: 1.75rem,
+  small-screen: 1.5rem
+);
+
+/////////////////mixin
+
+@mixin body {
+  font-family: $body-font;
+  font-size: map-get($body-font-size, default);
+  font-style: normal;
+  font-weight: $body-font-weight;
+  line-height: map-get($body-line-height, default);
+  color: $black;
+}
+@mixin title {
+  font-family: $title-font;
+  font-weight: $title-font-weight;
+  font-size: map-get($title-font-size, default);
+  line-height: map-get($title-line-height, default);
+}
+
+@mixin subtitle {
+  font-family: $subtitle-font;
+  font-weight: $subtitle-font-weight;
+  font-size: map-get($subtitle-font-size, default);
+  line-height: map-get($subtitle-line-height, default);
+}
+
+
+////Media Queries 
+// located in _mixin.scss partial file
+$layout-breakpoint-small: 768px;
+
+@mixin small-screen {
+  @media (max-width: $layout-breakpoint-small) {
+    @content;
+  }
+}
+@mixin small-screen-title {
+  @media (max-width: $layout-breakpoint-small) {
+    font-size: map-get($title-font-size, small-screen);
+    line-height: map-get($title-line-height, small-screen);
+  }
+}
+
+@mixin small-screen-subtitle {
+  @media (max-width: $layout-breakpoint-small) {
+    font-size: map-get($subtitle-font-size, small-screen);
+    line-height: map-get($subtitle-line-height, small-screen);
+  }
+}

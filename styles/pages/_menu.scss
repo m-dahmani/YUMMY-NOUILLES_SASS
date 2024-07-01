@@ -1,0 +1,74 @@
+/* menu Section */
+.menu {
+  display: flex;
+  flex-direction: column;
+  margin: 0 9.5rem 0 9.5rem;
+  @include small-screen {
+    margin: 0;
+    align-items: center;
+  }
+  &__title {
+    margin: 2.25rem 0 0 0;
+  }
+  &__subtitle {
+    margin: 0 0 2.25rem 0;
+    @include small-screen {
+      display: none;
+    }
+  }
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $white;
+    text-align: center;
+    @include small-screen {
+      /* width: 19.5rem;
+        padding-top: 1.25rem;
+        padding-bottom: 2rem; */
+      width: 19.5rem;
+      padding-bottom: 2rem;
+      margin-top: 2.25rem
+    }
+  }
+  &_icon {
+    width: 9rem;
+    height: 9rem;
+    margin-top: 4rem;
+    margin-bottom: 3rem;
+    @include small-screen {
+      width: 4rem;
+      height: 4rem;
+      margin-top: 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+  }
+  &__part {
+    margin-bottom: 3.75rem;
+    @include small-screen {
+      margin-bottom: 0;
+    }
+  }
+  &__partTitle {
+    margin-bottom: 1.75rem;
+    @include small-screen {
+      margin-bottom: 0.5rem;
+    }
+  }
+  &__partDish {
+    margin-bottom: 2rem;
+    line-height: 2.5rem;
+    @include small-screen {
+      /* margin-bottom: 0;
+        line-height: 1.25rem; */
+      margin-bottom: 0;
+      font-size: 0.75rem;
+      line-height: 1rem;
+    }
+  }
+  &__dishDescription {
+    @include small-screen {
+      display: none;
+    }
+  }
+}

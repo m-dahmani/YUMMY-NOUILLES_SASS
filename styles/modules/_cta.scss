@@ -1,0 +1,18 @@
+.cta {
+  display: inline-block;
+  padding: 0.75rem 3rem 0.75rem 3rem;
+  background-color: $black;
+  text-decoration: none;
+  @include subtitle;
+  color: $white;
+  @include small-screen {
+    /* padding-right: 4.75rem; */
+    /* padding-left: 4.75rem; */
+    padding: 0.75rem 4.75rem 0.75rem 4.75rem;
+  }
+  &:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.25rem;
+    text-decoration-thickness: 0.188rem;
+  }
+}

@@ -1,0 +1,54 @@
+.appBar {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem 0 1rem 3rem;
+  @include small-screen {
+    padding-left: 0;
+    padding-right: 0;
+    justify-content: center;
+  }
+  &__logo {
+    width: 4.5rem;
+    height: 4.5rem;
+    @include small-screen {
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+  &__nav {
+    display: flex;
+    align-items: center;
+    padding-left: 2rem;
+    @include small-screen {
+      padding-left: 1rem;
+    }
+    & > a {
+      @include subtitle;
+      color: $black;
+      margin-right: 1rem;
+      text-decoration: none;
+      &:hover,
+      &.active {
+        text-decoration: underline $secondary-color;
+        text-underline-offset: 0.25rem;
+        text-decoration-thickness: 0.188rem;
+      }
+    }
+  }
+}
+
+  //&__navItem {
+  //  @include subtitle;
+  //  color: $black;
+  //  margin-right: 1rem;
+  //  text-decoration: none;
+  //  &:hover,
+  //  &.active {
+  //    text-decoration: underline $secondary-color;
+  //    text-underline-offset: 0.25rem;
+  //    text-decoration-thickness: 0.188rem;
+  //  }
+  //}
+//}
+
+
